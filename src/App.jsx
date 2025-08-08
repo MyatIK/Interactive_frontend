@@ -5,6 +5,8 @@ import Register from './components/Register';
 import { Route,Routes,Navigate } from 'react-router-dom';
 import ProtectedRoute from './ProtectedRoute';
 import NotFound from './components/NotFound';
+import LandingPage from './components/LandingPage';
+import Destination from './components/Destination';
 
 function App() {
 
@@ -27,9 +29,12 @@ function App() {
               <Home/>
             </ProtectedRoute>}/>
             
+            <Route path='/LandingPage' element={<LandingPage/>}/>
             <Route path='/login' element={<Login/>}/>
             <Route path='/register' element={<RegisterAndLogout/>}/>
             <Route path='*' element={<NotFound/>}/>
+            <Route path='/destination' element={<Destination/>}/>
+
 
 
         
